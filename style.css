@@ -1,0 +1,41 @@
+/* style.css - simple responsive styles */
+:root{
+  --blue:#0b5394;
+  --muted:#6b7280;
+  --bg:#f3f4f6;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;line-height:1.5;margin:0;color:#0f172a;background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{background:var(--card);padding:18px;border-radius:10px;display:flex;align-items:center;gap:16px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.logo{width:84px;height:84px;border-radius:8px;background:linear-gradient(180deg,var(--blue),#0a4a84);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
+.brand h1{margin:0;font-size:20px;color:var(--blue)}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.nav{margin-left:auto;display:flex;gap:12px;align-items:center}
+.nav a{color:var(--blue);text-decoration:none;font-weight:600}
+.hero{display:flex;gap:28px;align-items:center;margin-top:26px}
+.hero-card{flex:1;background:var(--card);padding:26px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.hero h2{margin:0 0 10px;font-size:28px;color:#0f172a}
+.hero p{margin:0;color:var(--muted)}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.service{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 14px rgba(15,23,42,0.04)}
+.service h3{margin:0 0 8px;font-size:16px;color:var(--blue)}
+.service p{margin:0;color:var(--muted);font-size:14px}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.contact-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 14px rgba(15,23,42,0.04)}
+.contact-card h3{margin:0 0 8px}
+.contact-list{line-height:1.6;color:var(--muted)}
+.footer{text-align:center;margin:28px 0;color:var(--muted);font-size:13px}
+.hero-image{width:420px;max-width:40%;background:#fff;border-radius:12px;padding:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.hero-image img{max-width:100%;border-radius:8px}
+
+/* responsive */
+@media (max-width:900px){
+  .services{grid-template-columns:1fr}
+  .contact-section{grid-template-columns:1fr}
+  .hero{flex-direction:column}
+  .logo{width:68px;height:68px}
+  .nav{display:none}
+}
